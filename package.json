@@ -1,0 +1,25 @@
+{
+  "name": "bountyapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.4",
+    "web3modal": "^1.9.12"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.19",
+    "@types/react": "^18.0.27",
+    "typescript": "^4.9.5"
+  }
+}

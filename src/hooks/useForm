@@ -1,0 +1,16 @@
+// hooks/useForm.js
+import { useState } from 'react';
+
+export const useForm = (initialValues) => {
+  const [form, setForm] = useState(initialValues);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const resetForm = () => {
+    setForm(initialValues);
+  };
+
+  return [form, handleChange, resetForm];
+};

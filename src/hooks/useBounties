@@ -1,0 +1,8 @@
+// hooks/useBounties.js
+import { useContext } from 'react';
+import { BountyContext } from '../context/BountyContext';
+
+export const useBounties = () => {
+  const { bounties, getBounties } = useContext(BountyContext);
+  return { bounties, getBounties };
+};
