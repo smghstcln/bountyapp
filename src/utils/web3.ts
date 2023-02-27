@@ -5,10 +5,10 @@ import { Bounty } from "../types";
 
 const web3 = new Web3(Web3.givenProvider);
 
-const bountyContractAddress = "0x123abc..."; // Replace with actual contract address
+const bountyContractAddress = "0x123abc..."; // actual contract address
 
 const bountyContractABI = [
-  // Replace with actual contract ABI
+  //  actual contract ABI
   {
     constant: false,
     inputs: [

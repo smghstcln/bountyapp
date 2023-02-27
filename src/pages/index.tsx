@@ -1,12 +1,21 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-const Home = () => {
-  return (
-    <div>
-      <h1 className="text-6xl font-bold text-center">Gitcoin</h1>
-      <p className="text-lg text-center">A simple platform for funding, issuing, and browsing bounties</p>
-    </div>
-  );
-};
+import NavBar from '../components/NavBar';
+import  Home from '../pages/Home';
+import IssueBounty  from '../pages/IssueBounty';
+import { FundBounty } from '../pages/FundBounty';
 
-export default Home;
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+      <NavBar />
+      <Route path="/" element={<Home />} />
+      <Route path="/issue" element={<IssueBounty />} />
+      <Route path="/fund" element={<FundBounty />} />
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+);

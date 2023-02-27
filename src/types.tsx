@@ -1,6 +1,7 @@
-import { Key } from "react";
+import { Key, ReactNode } from "react";
 
 export type Bounty = {
+    amount: ReactNode;
     id: Key | null | undefined;
     _id: string;
     title: string;

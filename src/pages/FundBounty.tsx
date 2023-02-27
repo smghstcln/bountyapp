@@ -5,7 +5,7 @@ export const FundBounty = () => {
   const [bountyId, setBountyId] = useState<string>('');
   const [amount, setAmount] = useState<string>('');
 
-  const { bounties, getBounties } = useBounties();
+  const { bounties, getBounties } = useBounties('');
 
   const handleBountyChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setBountyId(e.target.value);
