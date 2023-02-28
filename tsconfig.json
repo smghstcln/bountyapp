@@ -1,20 +1,21 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "typeRoots": ["./@types/solc.d.ts", "./node_modules/@types"],
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "jsx": "preserve",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
       "@components/*": [
-        "components/*"
+        "src/components/*"
       ],
       "@context/*": [
-        "context/*"
+        "src/context/*"
       ],
       "@utils/*": [
-        "utils/*"
+        "src/utils/*"
       ],
       "@types/*": [
         "types/*"
@@ -35,7 +36,8 @@
     "isolatedModules": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "types/**/*"
   ],
   "exclude": [
     "node_modules",
