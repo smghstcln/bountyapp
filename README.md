@@ -10,7 +10,7 @@ Clone the repository:
 
 
 
-git clone https://github.com/smghst/bountyapp.git
+git clone https://github.com/smghstcln/bountyapp.git
 Install dependencies:
 
 
