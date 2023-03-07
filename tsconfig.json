@@ -38,7 +38,7 @@
   "include": [
     "src/**/*",
     "types/**/*",
-    "server.ts"
+    "server.tsx"
   ],
   "exclude": [
     "node_modules",
