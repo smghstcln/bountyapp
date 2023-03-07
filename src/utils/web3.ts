@@ -1,36 +1,52 @@
-// utils/web3.ts
-
 import Web3 from "web3";
-import { Bounty } from "../types";
 
 const web3 = new Web3(Web3.givenProvider);
 
-const bountyContractAddress = "0x123abc..."; // actual contract address
+const bountyContractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138"; // actual contract address
 
 const bountyContractABI = [
   //  actual contract ABI
   {
-    constant: false,
-    inputs: [
-      {
-        name: "title",
-        type: "string",
-      },
-      {
-        name: "description",
-        type: "string",
-      },
-      {
-        name: "amount",
-        type: "uint256",
-      },
-    ],
-    name: "createBounty",
-    outputs: [],
-    payable: true,
-    stateMutability: "payable",
-    type: "function",
+    "inputs": [],
+    "name": "beforeAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   },
+  {
+    "inputs": [],
+    "name": "checkFailure",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "checkSenderAndValue",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "checkSuccess",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "checkSuccess2",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  }
 ];
 
 const bountyContract = new web3.eth.Contract(

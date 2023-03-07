@@ -37,7 +37,8 @@
   },
   "include": [
     "src/**/*",
-    "types/**/*"
+    "types/**/*",
+    "server.ts"
   ],
   "exclude": [
     "node_modules",
