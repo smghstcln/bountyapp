@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import { matchPath } from 'react-router-dom';
-import Home from './src/pages/Home';
+import App from './src/pages/index';
 
 const app = express();
 const server = http.createServer(app);
@@ -11,11 +11,11 @@ const server = http.createServer(app);
 app.use(express.static('public'));
 
 app.get('*', (req: Request, res: Response) => {
-  const match = matchPath(req.url ?? '/',  '/');
+  const match = matchPath(req.url ?? '/', '/');
 
   const markup = renderToString(
     <StaticRouter location={req.url}>
-      <Home />
+      <App />
     </StaticRouter>
   );
 
@@ -31,13 +31,6 @@ app.get('*', (req: Request, res: Response) => {
         <body>
           <div id="root">${markup}</div>
           <script src="./dist/bundle.js" defer></script>
-          <script>
-            if (typeof window !== 'undefined') {
-              // Client-side code that references document goes here
-              const root = document.getElementById('root');
-              console.log(root.textContent);
-            }
-          </script>
         </body>
       </html>
     `);

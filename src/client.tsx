@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import { BrowserRouter } from 'react-router-dom';
+import App from './pages/index';
 
-ReactDOM.hydrate(
-  <Router>
-      <Route path="/">
-        <Home />
-      </Route>
-  </Router>,
-  document.getElementById('root')
-);
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function() {
+    ReactDOM.render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>,
+      document.getElementById('root')
+    );
+  });
+}
